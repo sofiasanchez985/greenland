@@ -1,6 +1,6 @@
 # greenland ice sheets visualizer!
 
-* Unfinished Project Under Construction as of October 2020 *
+--- Unfinished Project Under Construction as of October 2020 ---
 
 An application under development that uses MRTK in Unity in order to see Greenland's topography and ice sheets.
 

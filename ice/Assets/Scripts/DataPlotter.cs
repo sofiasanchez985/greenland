@@ -58,7 +58,9 @@ public class DataPlotter : MonoBehaviour
             float z = System.Convert.ToSingle(pointList[i][zName]);
             
             //instantiate the prefab with coordinates defined above
-            Instantiate(PointPrefab, new Vector3(x*scaleFactor, y*scaleFactor, z*scaleFactor), Quaternion.identity, Parent.transform);
+            GameObject tempSphere = Instantiate(PointPrefab, new Vector3(x*scaleFactor, y*scaleFactor, z*scaleFactor), Quaternion.identity, Parent.transform);
+            tempSphere.transform.localPosition = new Vector3(x * scaleFactor, y * scaleFactor, z * scaleFactor);
+
         }
 
     }

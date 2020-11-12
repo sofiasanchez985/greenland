@@ -14,6 +14,8 @@ public class DataPlotter : MonoBehaviour
     public int columnX = 0;
     public int columnY = 1;
     public int columnZ = 2;
+
+    public float scaleFactor = 0.05F;
     
     // Full column names
     public string xName;
@@ -22,6 +24,7 @@ public class DataPlotter : MonoBehaviour
 
     // The prefab for the data points to be instantiated
     public GameObject PointPrefab;
+    public GameObject Parent;
 
     // Use this for initialization
     void Start () {
@@ -55,7 +58,9 @@ public class DataPlotter : MonoBehaviour
             float z = System.Convert.ToSingle(pointList[i][zName]);
             
             //instantiate the prefab with coordinates defined above
-            Instantiate(PointPrefab, new Vector3(x, y, z), Quaternion.identity);
+            GameObject tempSphere = Instantiate(PointPrefab, new Vector3(x*scaleFactor, y*scaleFactor, z*scaleFactor), Quaternion.identity, Parent.transform);
+            tempSphere.transform.localPosition = new Vector3(x * scaleFactor, y * scaleFactor, z * scaleFactor);
+
         }
 
     }

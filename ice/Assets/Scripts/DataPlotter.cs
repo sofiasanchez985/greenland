@@ -40,7 +40,10 @@ public class DataPlotter : MonoBehaviour
     
         // Print number of keys (using .count)
         Debug.Log("There are " + columnList.Count + " columns in CSV");
-        
+
+        // Print number of objects overall - - - - - - - - - - - - - - - - - - i added this
+        Debug.Log("There are " + pointList.Count + " items in CSV");
+
         foreach (string key in columnList)
         Debug.Log("Column name is " + key);
 

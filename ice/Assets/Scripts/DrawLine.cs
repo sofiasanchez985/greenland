@@ -20,10 +20,6 @@ public class DrawLine : MonoBehaviour
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
-        //leftEnd = GetComponent<GameObject>();
-        //rightEnd = GetComponent<GameObject>();
-        //distText1 = FindObjectOfType<TextMeshPro>();
-        //distText2 = FindObjectOfType<TextMeshPro>();
 
         lineRenderer.SetPosition(0, origin.position);
         lineRenderer.SetPosition(1, dest.position);
@@ -31,8 +27,8 @@ public class DrawLine : MonoBehaviour
 
         dist = Vector3.Distance(origin.position, dest.position);
         dist_in_km = dist * 0.01f;
-        distText1.SetText($"Distance:{dist_in_km} km");
-        distText2.SetText($"Distance:{dist_in_km} km");
+        distText1.SetText($"Distance:{dist_in_km.ToString("0.0000")} km");
+        distText2.SetText($"Distance:{dist_in_km.ToString("0.0000")} km");
     }
 
     // Update is called once per frame
@@ -42,7 +38,7 @@ public class DrawLine : MonoBehaviour
         lineRenderer.SetPosition(1, dest.position);
         dist = Vector3.Distance(origin.position, dest.position);
         dist_in_km = dist * 0.01f;
-        distText1.SetText($"Distance:{dist_in_km} km");
-        distText2.SetText($"Distance:{dist_in_km} km");
+        distText1.SetText($"Distance:{dist_in_km.ToString("0.0000")} km");
+        distText2.SetText($"Distance:{dist_in_km.ToString("0.0000")} km");
     }
 }

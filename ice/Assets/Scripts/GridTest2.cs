@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
@@ -8,6 +9,9 @@ public class GridTest2 : MonoBehaviour
     public int xSize, ySize;
     private Vector3[] vertices;
     private Mesh mesh;
+
+    // Bottom of ice sheet
+    public int yStart = 0;
 
     // Name of the input file, no extension
     public string inputfile;
@@ -20,7 +24,7 @@ public class GridTest2 : MonoBehaviour
     public int columnZ = 1;
 
     // Scale the model
-    public float scaleFactor = 0.05F;
+    public float scaleFactor = 0.1F;
 
     // Full column names
     public string xName;
@@ -59,22 +63,37 @@ public class GridTest2 : MonoBehaviour
 
         Debug.Log("first y/z value: " + pointList[0][zName]);
 
-        vertices = new Vector3[(pointList.Count+1) * (ySize+1)];
-        //Vector2[] uv = new Vector2[vertices.Length];
-        for (int y = 0, w = 0; y <= ySize; y++)
+        // Added Math.Abs(yStart) to size in order to fit negative y start values
+        vertices = new Vector3[(pointList.Count+1) * (ySize+Math.Abs(yStart)+1)];
+        Vector2[] uv = new Vector2[vertices.Length];
+
+        for (int y = yStart, w = 0; y <= ySize; y++)
         {
             //changed from <= to <
             for (int i = 0; i < pointList.Count; i++, w++)
             {
-                vertices[w] = new Vector3((float)pointList[i][xName] * scaleFactor, y * 100, (float)pointList[i][zName] * scaleFactor);
-                GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                sphere.transform.position = new Vector3((float)pointList[i][xName] * scaleFactor, y * 100, (float)pointList[i][zName] * scaleFactor);
-                //uv[i] = new Vector2((float)x / xSize, (float)y / ySize);
-                //Debug.Log("x: ", );
+                float xPos = (float)pointList[i][xName] * scaleFactor;
+                float zPos = (float)pointList[i][zName] * scaleFactor;
+                vertices[w] = new Vector3(xPos, y * 100, zPos);
+
+                // Spheres for testing/debugging
+
+                //GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                //sphere.transform.position = new Vector3((float)xPos, y * 100, (float)zPos);
+                //sphere.transform.position = new Vector2((float)xPos / pointList.Count, (float)y / ySize);
+
+                // Mapping coordinates to fit between 0,1
+
+                float xStart = (float)pointList[0][xName];
+                float xEnd = (float)pointList[pointList.Count - 1][xName];
+                float xCurrent = (float)pointList[i][xName];
+                float xUV = (xCurrent - xStart) / (xEnd - xStart);
+
+                uv[w] = new Vector2(xUV, (float)y / ySize);
             }
         }
         mesh.vertices = vertices;
-        //mesh.uv = uv;
+        mesh.uv = uv;
 
         int[] triangles = new int[(pointList.Count) * ySize * 6];
         for (int ti = 0, vi = 0, y = 0; y < ySize; y++, vi++)

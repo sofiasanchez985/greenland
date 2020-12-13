@@ -15,7 +15,7 @@ public class DataPlotter : MonoBehaviour
     public int columnY = 1;
     public int columnZ = 2;
 
-    public float scaleFactor = 0.05F;
+    public float scaleFactor = 0.1F;
     
     // Full column names
     public string xName;

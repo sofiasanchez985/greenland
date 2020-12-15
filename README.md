@@ -1,13 +1,6 @@
-# greenland ice sheets visualizer!
+# greenland ice sheets Photon Networking Test! <br/>
 
---- Unfinished Project Under Construction as of October 2020 ---
+**This brach is for testing the photon multi-player networking** <br/>
 
-An application under development that uses MRTK in Unity in order to see Greenland's topography and ice sheets.
-
-Object files created by Alexandra Boghosian.
-
-Working under our advisors Professor Steven Feiner, Alexandra Boghosian, and Carmine Elvezio.
-
-<img src="https://raw.githubusercontent.com/sofiasanchez985/greenland/main/oct_24_pic.jpg"      alt="Markdown Monster icon"      style="float: left; margin-right: 10px;" />
-
-
+- November 24: Import Photon2 and set up the connection to the master server <br/><br/>
+- December 15&16 Updates: create lobby and 2 players can join the same room

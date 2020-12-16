@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Photon_test.unity
     guid: a6c8187fffe774867841843c046e4e91
+  - enabled: 1
+    path: Assets/Scenes/IceSheets.unity
+    guid: 6bd637712e359d3489f3201b192784a3
   m_configObjects: {}

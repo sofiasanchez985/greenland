@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.SceneManagement;
 
 public class PhotonLobby : MonoBehaviourPunCallbacks
 {
@@ -23,6 +24,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         print("Connected to server!");
+        PhotonNetwork.AutomaticallySyncScene = true;
         startButton.SetActive(true);
     }
     public override void OnDisconnected(DisconnectCause cause)
@@ -56,6 +58,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         print("You are now in a room!!!");
+        SceneManager.LoadScene(1);
     }
     public void OnCancellButtonClick()
     {
@@ -66,10 +69,4 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     }
 
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

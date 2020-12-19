@@ -7,8 +7,9 @@ public class CameraFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        Camera.main.GetComponent<Camera>().farClipPlane = 15000f;
+        //Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        //Camera.main.transform.position = new Vector3(0, 0, 0);
+        //Camera.main.GetComponent<Camera>().farClipPlane = 15000f;
     }
 
     // Update is called once per frame

@@ -5,6 +5,7 @@ using Photon.Pun;
 
 public class photonInitializer : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {

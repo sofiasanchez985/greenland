@@ -23,7 +23,9 @@ public class DrawLine : MonoBehaviour
 
         lineRenderer.SetPosition(0, origin.position);
         lineRenderer.SetPosition(1, dest.position);
-        lineRenderer.SetWidth(.025f, .025f);
+        lineRenderer.startWidth = .005f;
+        lineRenderer.endWidth = .005f;
+        //lineRenderer.SetWidth(.025f, .025f);
 
         dist = Vector3.Distance(origin.position, dest.position);
         dist_in_km = dist * 0.01f;

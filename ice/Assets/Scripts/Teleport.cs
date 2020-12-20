@@ -5,6 +5,7 @@ using UnityEngine;
 public class Teleport : MonoBehaviour
 {
     public GameObject StartTarget;
+    public GameObject BirdTarget;
     public GameObject Target2011;
     public GameObject Target2014;
     public GameObject Target2015;
@@ -27,16 +28,25 @@ public class Teleport : MonoBehaviour
     
     void ScaleUniverse()
     {
-        Vector3 scaleChange = new Vector3(.1f, .1f, .1f);
-        Universe.transform.localScale = scaleChange;
+        Vector3 scaleChangeLarge = new Vector3(.1f, .1f, .1f);
+        Universe.transform.localScale = scaleChangeLarge;
     }
 
     public void StartPos()
     {
+        Vector3 scaleChangeSmall = new Vector3(.001f, .001f, .001f);
+        Universe.transform.localScale = scaleChangeSmall;
+        cam.transform.rotation = StartTarget.transform.rotation;
         cam.transform.position = StartTarget.transform.position;
-        //cam.transform.rotation = StartTarget.transform.rotation;
     }
 
+    public void BirdsEye()
+    {
+        Vector3 scaleChangeSmall = new Vector3(.001f, .001f, .001f);
+        Universe.transform.localScale = scaleChangeSmall;
+        cam.transform.rotation = BirdTarget.transform.rotation;
+        cam.transform.position = BirdTarget.transform.position;
+    }
 
     public void Move2011()
     {

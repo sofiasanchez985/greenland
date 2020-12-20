@@ -654,6 +654,7 @@ GameObject:
   - component: {fileID: 1792308721}
   - component: {fileID: 1792308720}
   - component: {fileID: 1792308719}
+  - component: {fileID: 1792308725}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -895,13 +896,25 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   observableSearch: 2
-  Synchronization: 3
-  OwnershipTransfer: 0
+  Synchronization: 2
+  OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: 1792308723}
   viewIdField: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &1792308725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792308714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be59df7c4cd1a433695f739f281483cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1932906521
 PrefabInstance:
   m_ObjectHideFlags: 0

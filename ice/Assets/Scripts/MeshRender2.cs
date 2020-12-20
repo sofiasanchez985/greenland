@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
-public class GridTest2 : MonoBehaviour
+public class MeshRender2 : MonoBehaviour
 {
     // Mesh tutorial vars
     public int xSize, ySize;
     private Vector3[] vertices;
     private Mesh mesh;
+
+    // Bottom of ice sheet
+    public int yStart = 0;
 
     // Name of the input file, no extension
     public string inputfile;
@@ -60,17 +63,18 @@ public class GridTest2 : MonoBehaviour
 
         Debug.Log("first y/z value: " + pointList[0][zName]);
 
-        vertices = new Vector3[(pointList.Count+1) * (ySize+1)];
+        // Added Math.Abs(yStart) to size in order to fit negative y start values
+        vertices = new Vector3[(pointList.Count + 1) * (ySize + Math.Abs(yStart) + 1)];
         Vector2[] uv = new Vector2[vertices.Length];
 
-        for (int y = 0, w = 0; y <= ySize; y++)
+        for (int y = yStart, w = 0; y <= ySize; y++)
         {
             //changed from <= to <
             for (int i = 0; i < pointList.Count; i++, w++)
             {
                 float xPos = (float)pointList[i][xName] * scaleFactor;
                 float zPos = (float)pointList[i][zName] * scaleFactor;
-                vertices[w] = new Vector3(xPos, y*10, zPos);
+                vertices[w] = new Vector3(xPos, y * 100, zPos);
 
                 // Spheres for testing/debugging
 
@@ -85,24 +89,22 @@ public class GridTest2 : MonoBehaviour
                 float xCurrent = (float)pointList[i][xName];
                 float xUV = (xCurrent - xStart) / (xEnd - xStart);
 
-                float yUV = y / ySize;
-
-                uv[w] = new Vector2(xUV, yUV);
+                uv[w] = new Vector2(xUV, (float)y / ySize);
             }
         }
         mesh.vertices = vertices;
         mesh.uv = uv;
 
         int[] triangles = new int[(pointList.Count) * ySize * 6];
-        for (int ti = 0, vi = 0, y = 0; y < ySize; y ++, vi++)
+        for (int ti = 0, vi = 0, y = 0; y < ySize; y++, vi++)
         {
             //subtracted one from pointList.Count to make sure #vertices = #indices
             for (int x = 0; x < pointList.Count - 1; x++, ti += 6, vi++)
             {
                 triangles[ti] = vi;
-                triangles[ti + 3] = triangles[ti + 2] = vi + 1;
+                triangles[ti + 4] = triangles[ti + 1] = vi + 1;
                 //subtracted one from pointList.Count
-                triangles[ti + 4] = triangles[ti + 1] = vi + pointList.Count;
+                triangles[ti + 3] = triangles[ti + 2] = vi + pointList.Count;
                 //subtracted one from pointList.Count
                 triangles[ti + 5] = vi + pointList.Count + 1;
             }

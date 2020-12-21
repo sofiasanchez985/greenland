@@ -13,7 +13,7 @@ public class transferownership : MonoBehaviourPunCallbacks
     //Start is called before the first frame update
     void Start()
     {
-        Debug.Log(PhotonNetwork.LocalPlayer.ActorNumber);
+        //Debug.Log(PhotonNetwork.LocalPlayer.ActorNumber);
     }
 
     ////// Update is called once per frame
@@ -21,22 +21,12 @@ public class transferownership : MonoBehaviourPunCallbacks
     {
         if (pickup.GetComponent<PhotonView>().IsMine)
         {
-            Debug.Log("HIII");
-            //grabObject(); 
+            //Debug.Log("HIII");
         }
         else
         {
-            //    Debug.Log(PhotonNetwork.LocalPlayer);
-            Debug.Log("Hummm");
+            //Debug.Log("Hummm");
             pickup.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
-            //    //grabObject();
         }
-    }
-
-    private void OnTriggerEnter(Collider collider)
-    {
-        //    Debug.Log(PhotonNetwork.LocalPlayer);
-        //    Debug.Log("HIII");
-        //    PhotonView.TransferOwnership(PhotonNetwork.LocalPlayer.ActorNumber);
     }
 }

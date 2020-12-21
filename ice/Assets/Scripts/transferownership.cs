@@ -7,32 +7,36 @@ using Photon.Realtime;
 public class transferownership : MonoBehaviourPunCallbacks
 {
 
+    public static GameObject LocalPlayer;
+    public GameObject pickup;
 
-    //private GameObject pickup;
-
-    // Start is called before the first frame update
-    //void Start()
-    //{
-
-    //}
+    //Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log(PhotonNetwork.LocalPlayer.ActorNumber);
+    }
 
     ////// Update is called once per frame
     void Update()
     {
-        //if (pickup.GetComponent<PhotonView>().IsMine)
-        //{
-        //    //grabObject(); 
-        //}
-        //else
-        //{
-        //    base.photonView.RequestOwnership();
-        //    //pickup.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.player.ID);
-        //    //grabObject();
-        //}
+        if (pickup.GetComponent<PhotonView>().IsMine)
+        {
+            Debug.Log("HIII");
+            //grabObject(); 
+        }
+        else
+        {
+            //    Debug.Log(PhotonNetwork.LocalPlayer);
+            Debug.Log("Hummm");
+            pickup.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
+            //    //grabObject();
+        }
     }
 
     private void OnTriggerEnter(Collider collider)
     {
-        base.photonView.RequestOwnership();
+        //    Debug.Log(PhotonNetwork.LocalPlayer);
+        //    Debug.Log("HIII");
+        //    PhotonView.TransferOwnership(PhotonNetwork.LocalPlayer.ActorNumber);
     }
 }

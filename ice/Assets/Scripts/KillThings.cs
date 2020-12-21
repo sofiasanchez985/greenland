@@ -8,6 +8,9 @@ public class KillThings : MonoBehaviour
     public GameObject Radar2011;
     public GameObject Radar2014;
     public GameObject Radar2015;
+    public GameObject Radar2011Flipped;
+    public GameObject Radar2014Flipped;
+    public GameObject Radar2015Flipped;
     public GameObject CSV2011;
     public GameObject CSV2014;
     public GameObject CSV2015;
@@ -17,17 +20,17 @@ public class KillThings : MonoBehaviour
 
     // Turn Radar Images On & Off
 
-    public void KillRadar2011() { Radar2011.transform.localScale = new Vector3(0, 0, 0); }
+    public void KillRadar2011() { Radar2011.transform.localScale = Radar2011Flipped.transform.localScale = new Vector3(0, 0, 0); }
 
-    public void KillRadar2014() { Radar2014.transform.localScale = new Vector3(0, 0, 0); }
+    public void KillRadar2014() { Radar2014.transform.localScale = Radar2014Flipped.transform.localScale = new Vector3(0, 0, 0); }
 
-    public void KillRadar2015() { Radar2015.transform.localScale = new Vector3(0, 0, 0); }
+    public void KillRadar2015() { Radar2015.transform.localScale = Radar2015Flipped.transform.localScale = new Vector3(0, 0, 0); }
 
-    public void AntiKillRadar2011() { Radar2011.transform.localScale = new Vector3(1, 1, 1); }
+    public void AntiKillRadar2011() { Radar2011.transform.localScale = Radar2011Flipped.transform.localScale = new Vector3(1, 1, 1); }
 
-    public void AntiKillRadar2014() { Radar2014.transform.localScale = new Vector3(1, 1, 1); }
+    public void AntiKillRadar2014() { Radar2014.transform.localScale = Radar2014Flipped.transform.localScale = new Vector3(1, 1, 1); }
 
-    public void AntiKillRadar2015() { Radar2015.transform.localScale = new Vector3(1, 1, 1); }
+    public void AntiKillRadar2015() { Radar2015.transform.localScale = Radar2015Flipped.transform.localScale = new Vector3(1, 1, 1); }
 
     // Turn CSV Data On & Off
 

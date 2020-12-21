@@ -4,6 +4,55 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
+    public GameObject TinyUniverse;
+    public GameObject NormalRotation;
+    public GameObject YRotation;
+
+    void Start()
+    {
+        Go();
+    }
+
+    public void GoScaleUniverse()
+    {
+        TinyUniverse.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+    }
+
+    public void RotationReset()
+    {
+        TinyUniverse.transform.rotation = NormalRotation.transform.rotation;
+    }
+
+    public void Go()
+    {
+        TinyUniverse.transform.localScale = new Vector3(0.001f, 0.001f, 0.001f);
+        RotationReset();
+        TinyUniverse.transform.position = new Vector3(8.8f, -2f, 94f); 
+    }
+
+    public void Go2011()
+    {
+        GoScaleUniverse();
+        RotationReset();
+        TinyUniverse.transform.position = new Vector3(86.1f, 0f, 923f);
+    }
+
+    public void Go2014()
+    {
+        GoScaleUniverse();
+        RotationReset();
+        TinyUniverse.transform.position = new Vector3(86.1f, 0f, 898f);
+    }
+
+    public void Go2015()
+    {
+        GoScaleUniverse();
+        TinyUniverse.transform.rotation = YRotation.transform.rotation;
+        TinyUniverse.transform.position = new Vector3(-902f, 1f, 91f);
+    }
+
+    /* Camera Teleportation
+    
     public GameObject StartTarget;
     public GameObject BirdTarget;
     public GameObject Target2011;
@@ -12,20 +61,6 @@ public class Teleport : MonoBehaviour
     public Camera cam;
     public GameObject Universe;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        StartPos();
-        //cam.transform.position = StartTarget.transform.position;
-    }
-
-    /*
-    void ResetCamera()
-    {
-        cam.transform.position = Vector3.zero;
-    }
-    */
-    
     void ScaleUniverse()
     {
         Vector3 scaleChangeLarge = new Vector3(.1f, .1f, .1f);
@@ -69,10 +104,6 @@ public class Teleport : MonoBehaviour
         cam.transform.position = Target2015.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    */
 
 }

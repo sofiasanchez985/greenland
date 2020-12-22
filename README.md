@@ -1,6 +1,17 @@
-# greenland ice sheets Photon Networking Test! <br/>
+# AR application on Hololens for visualizing icesheet in Greenland!
 
-**This brach is for testing the photon multi-player networking** <br/>
 
-- November 24: Import Photon2 and set up the connection to the master server <br/><br/>
-- December 15&16 Updates: create lobby and 2 players can join the same room
+An application under development that uses MRTK in Unity in order to see Greenland's topography and ice sheets.
+
+Contributors:
+
+* [Sofia Sanchez](https://github.com/sofiasanchez985/greenland), Columbia University
+* [Manxueying Li](https://github.com/lmxy0212), Columbia University
+
+Advising:
+Object files created by Alexandra Boghosian.
+
+Working under our advisors Professor Steven Feiner, Alexandra Boghosian, and Carmine Elvezio.
+
+<img src="https://raw.githubusercontent.com/sofiasanchez985/greenland/main/oct_24_pic.jpg"      alt="Markdown Monster icon"      style="float: left; margin-right: 10px;" />
+

@@ -62,7 +62,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
         startButton.SetActive(true);
         cancellButton.SetActive(false);
         PhotonNetwork.LeaveRoom();
-        Debug.Log("You leaft teh room.");
+        Debug.Log("You left the room.");
     }
 
 

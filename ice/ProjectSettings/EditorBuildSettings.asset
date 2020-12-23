@@ -18,4 +18,6 @@ EditorBuildSettings:
     path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Room
       for 1.unity
     guid: 9b8561c6e396849a5ba48c3eb9524049
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a95bded809e0cd642836c65f0ce80c79,
+      type: 2}

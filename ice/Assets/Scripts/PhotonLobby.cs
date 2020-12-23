@@ -9,6 +9,9 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     public static PhotonLobby lobby;
     public GameObject startButton;
     public GameObject cancellButton;
+
+    public GameObject playerPrefab;
+
     private void Awake()
     {
         lobby = this;
@@ -19,6 +22,33 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     {
         Debug.Log("Connecting to server....");
         PhotonNetwork.ConnectUsingSettings(); //connect to master photon server
+
+        //Instance = this;
+        if (playerPrefab == null)
+        { // #Tip Never assume public properties of Components are filled up properly, always check and inform the developer of it.
+
+            Debug.Log("Player prefab is not there :(");
+        }
+        else
+        {
+
+
+            if (playeravatar.LocalPlayerInstance == null)
+            {
+                // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
+                PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
+            }
+
+
+
+        }
+        if (playeravatar.LocalPlayerInstance == null)
+        {
+            //Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
+            // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
+            PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
+        }
+ 
     }
     public override void OnConnectedToMaster()
     {

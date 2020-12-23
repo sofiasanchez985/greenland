@@ -5,19 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Photon_test.unity
     guid: a6c8187fffe774867841843c046e4e91
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/IceSheets.unity
     guid: 6bd637712e359d3489f3201b192784a3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Launcher.unity
     guid: bff77b01b50254edbb6edeeaba5ae8b3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Room
       for 1.unity
     guid: 9b8561c6e396849a5ba48c3eb9524049
+  - enabled: 1
+    path: Assets/Scenes/Avatar Test.unity
+    guid: 6eb980f853c68434d91cc82f64c67bac
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a95bded809e0cd642836c65f0ce80c79,
       type: 2}

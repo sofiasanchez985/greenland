@@ -58,6 +58,6 @@ public class KillThings : MonoBehaviour
 
     public void AntiKillIceSurface() { IceSurface.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f); }
 
-    public void AntiKillRuler() { Ruler.transform.localScale = new Vector3(50, 50, 50); }
+    public void AntiKillRuler() { Ruler.transform.localScale = new Vector3(.1f, .1f, .1f); }
 
 }

@@ -4710,7 +4710,6 @@ GameObject:
   - component: {fileID: 1103304997}
   - component: {fileID: 1103304998}
   - component: {fileID: 1103304999}
-  - component: {fileID: 1103305000}
   m_Layer: 0
   m_Name: Teleport/Kill Button Scripts
   m_TagString: Untagged
@@ -4773,19 +4772,6 @@ MonoBehaviour:
   IceBed: {fileID: 1979281703}
   IceSurface: {fileID: 1038862997}
   Ruler: {fileID: 1441210501}
---- !u!114 &1103305000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103304996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b78938c9e90fd7c4eb4d3456846aabdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomName: oculusPhotonRoom
 --- !u!1001 &1111783125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5291,6 +5277,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1129184151}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1129896438
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8225257668914487288, guid: 9069ffc827b9f41f49529367ad55ee76,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225257668914487288, guid: 9069ffc827b9f41f49529367ad55ee76,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225257668914487288, guid: 9069ffc827b9f41f49529367ad55ee76,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225257668914487288, guid: 9069ffc827b9f41f49529367ad55ee76,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225257668914487288, guid: 9069ffc827b9f41f49529367ad55ee76,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225257668914487288, guid: 9069ffc827b9f41f49529367ad55ee76,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225257668914487288, guid: 9069ffc827b9f41f49529367ad55ee76,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225257668914487288, guid: 9069ffc827b9f41f49529367ad55ee76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225257668914487288, guid: 9069ffc827b9f41f49529367ad55ee76,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225257668914487288, guid: 9069ffc827b9f41f49529367ad55ee76,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225257668914487288, guid: 9069ffc827b9f41f49529367ad55ee76,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225257668914487290, guid: 9069ffc827b9f41f49529367ad55ee76,
+        type: 3}
+      propertyPath: m_Name
+      value: connect_to_room
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9069ffc827b9f41f49529367ad55ee76, type: 3}
 --- !u!1001 &1145684215
 PrefabInstance:
   m_ObjectHideFlags: 0

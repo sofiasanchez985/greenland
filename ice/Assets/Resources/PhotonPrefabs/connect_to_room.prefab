@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8225257668914487288}
-  - component: {fileID: 8225257668914487289}
+  - component: {fileID: 1688814966079147421}
   m_Layer: 0
   m_Name: connect_to_room
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8225257668914487289
+--- !u!114 &1688814966079147421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,8 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8225257668914487290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0665f3fc0eac4c8fb4c7d678630a8ba, type: 3}
+  m_Script: {fileID: 11500000, guid: b78938c9e90fd7c4eb4d3456846aabdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startButton: {fileID: 0}
-  cancellButton: {fileID: 0}
+  roomName: oculusPhotonRoom

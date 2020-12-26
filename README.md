@@ -5,7 +5,7 @@ An application under development that uses MRTK in Unity in order to see Greenla
 
 Contributors:
 
-* [Sofia Sanchez](https://github.com/sofiasanchez985/greenland), Columbia University
+* [Sofia Sanchez](https://github.com/sofiasanchez985), Columbia University
 * [Manxueying Li](https://github.com/lmxy0212), Columbia University
 
 --- Unfinished Project Under Construction as of October 2020 ---

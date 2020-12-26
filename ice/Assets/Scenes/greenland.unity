@@ -4710,6 +4710,7 @@ GameObject:
   - component: {fileID: 1103304997}
   - component: {fileID: 1103304998}
   - component: {fileID: 1103304999}
+  - component: {fileID: 1103305000}
   m_Layer: 0
   m_Name: Teleport/Kill Button Scripts
   m_TagString: Untagged
@@ -4772,6 +4773,19 @@ MonoBehaviour:
   IceBed: {fileID: 1979281703}
   IceSurface: {fileID: 1038862997}
   Ruler: {fileID: 1441210501}
+--- !u!114 &1103305000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103304996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78938c9e90fd7c4eb4d3456846aabdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: oculusPhotonRoom
 --- !u!1001 &1111783125
 PrefabInstance:
   m_ObjectHideFlags: 0

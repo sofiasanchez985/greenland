@@ -5,6 +5,7 @@ using UnityEngine;
 public class KillThings : MonoBehaviour
 {
 
+    public GameObject LargeMenu;
     public GameObject Radar2011;
     public GameObject Radar2014;
     public GameObject Radar2015;
@@ -17,6 +18,12 @@ public class KillThings : MonoBehaviour
     public GameObject IceBed;
     public GameObject IceSurface;
     public GameObject Ruler;
+
+    // Turn Large Menu On & Off
+
+    public void KillLargeMenu() { LargeMenu.transform.localScale = new Vector3(0, 0, 0); }
+
+    public void AntiKillLargeMenu() { LargeMenu.transform.localScale = new Vector3(1, 1, 1); }
 
     // Turn Radar Images On & Off
 

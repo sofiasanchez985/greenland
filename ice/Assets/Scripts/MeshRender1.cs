@@ -5,13 +5,21 @@ using UnityEngine;
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class MeshRender1 : MonoBehaviour
 {
+
+    // eliminate ySize, it's one bc one triangle only yeet
+    // make the yStart or yEnd positions translate onto where the mesh starts automatically
+    // correct values on 2011 and 2011-2015 flipped
+    // basically went around the issue and made a big triangle rather than +6,000 small layers(:
+
     // Mesh tutorial vars
     public int xSize, ySize;
     private Vector3[] vertices;
     private Mesh mesh;
 
     // Bottom of ice sheet
-    public int yStart = 0;
+    public float yStart;
+    public float yEnd;
+    private float radarHeight;
 
     // Name of the input file, no extension
     public string inputfile;
@@ -41,8 +49,13 @@ public class MeshRender1 : MonoBehaviour
         // Process CSV Data
         pointList = CSVReader.Read(inputfile);
 
+        //float radarHeightF = (yEnd - yStart) * scaleFactor;
+        //radarHeight = (int)radarHeightF;
+        radarHeight = Math.Abs(yEnd - yStart) * scaleFactor;
+
         // Declare list of strings, fill with keys (column names)
-        List<string> columnList = new List<string>(pointList[1].Keys);
+        // The index of pointList doesn't matter, keys are same for every dictionary
+        List<string> columnList = new List<string>(pointList[0].Keys);
 
         // Print number of keys (using .count)
         Debug.Log("There are " + columnList.Count + " columns in CSV");
@@ -64,17 +77,21 @@ public class MeshRender1 : MonoBehaviour
         Debug.Log("first y/z value: " + pointList[0][zName]);
 
         // Added Math.Abs(yStart) to size in order to fit negative y start values
-        vertices = new Vector3[(pointList.Count + 1) * (ySize + Math.Abs(yStart) + 1)];
+        // declaring a list of Vector3's with the size of the horizonal point list * height of the mesh
+        //vertices = new Vector3[(pointList.Count + 1) * (ySize + Math.Abs(yStart) + 1)];
+        // one bc one triangle 11!!1!!!!!!!!
+        vertices = new Vector3[(pointList.Count + 1) * (1 + 1)];
         Vector2[] uv = new Vector2[vertices.Length];
 
-        for (int y = yStart, w = 0; y <= ySize; y++)
+        //for (int y = yStart, w = 0; y <= ySize; y++)
+        for (int y = 0, w = 0; y <= ySize; y++)
         {
             //changed from <= to <
             for (int i = 0; i < pointList.Count; i++, w++)
             {
                 float xPos = (float)pointList[i][xName] * scaleFactor;
                 float zPos = (float)pointList[i][zName] * scaleFactor;
-                vertices[w] = new Vector3(xPos, y * 100, zPos);
+                vertices[w] = new Vector3(xPos, y * radarHeight, zPos);
 
                 // Spheres for testing/debugging
 

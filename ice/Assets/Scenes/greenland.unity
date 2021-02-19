@@ -361,8 +361,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSize: 0
-  ySize: 6
-  yStart: 0
+  ySize: 1
+  yStart: -4598.5
+  yEnd: 1457.7
   inputfile: 2011ImageCoords
   columnX: 0
   columnZ: 1
@@ -2122,8 +2123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSize: 0
-  ySize: 6
-  yStart: 0
+  ySize: 1
+  yStart: -2909.767
+  yEnd: 3508.9763
   inputfile: 2014ImageCoords
   columnX: 0
   columnZ: 1
@@ -3735,8 +3737,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSize: 0
-  ySize: 6
-  yStart: 0
+  ySize: 1
+  yStart: -4676.6387
+  yEnd: 681.0532
   inputfile: 2015ImageCoords
   columnX: 0
   columnZ: 1

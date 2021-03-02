@@ -13,6 +13,8 @@ public class MeshRender1 : MonoBehaviour
 
     // Mesh tutorial vars
     public int xSize, ySize;
+    //public GameObject meshObject;
+    public Transform mytransform;
     private Vector3[] vertices;
     private Mesh mesh;
 
@@ -128,6 +130,25 @@ public class MeshRender1 : MonoBehaviour
         }
         mesh.triangles = triangles;
         mesh.RecalculateNormals();
+
+        
+        float yPosScaled = yStart * scaleFactor;
+        Debug.Log("YPOS " + yPosScaled);
+        //meshObject.transform.position = new Vector3(0, 0, 0);
+        mytransform.localPosition = new Vector3(0, yPosScaled, 0);
+        Debug.Log("position: " + mytransform.localPosition);
+        
     }
+
+    /*
+    private void FixedUpdate()
+    {
+        //float yPosScaled = yStart * scaleFactor;
+        //Debug.Log("YPOS " + yPosScaled);
+        //meshObject.transform.position = new Vector3(0, 0, 0);
+        //meshObject.transform.position = new Vector3(0, yPosScaled, 0);
+        Debug.Log("transform print " + mytransform.position);
+    }
+    */
 
 }

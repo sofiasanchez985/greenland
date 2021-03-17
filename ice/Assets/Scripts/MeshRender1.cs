@@ -42,10 +42,12 @@ public class MeshRender1 : MonoBehaviour
 
     private void Awake()
     {
-        Generate();
+        ProcessData();
+        //Generate();
+        StartCoroutine(Generate());
     }
 
-    private void Generate()
+    private void ProcessData()
     {
 
         // Process CSV Data
@@ -71,7 +73,16 @@ public class MeshRender1 : MonoBehaviour
         xName = columnList[columnX];
         zName = columnList[columnZ];
 
-        ////
+    }
+
+    //do stuff with camera
+
+    private IEnumerator Generate()
+    //private void Generate()
+    {
+        WaitForSeconds wait = new WaitForSeconds(0.005f);
+
+        Debug.Log("GOING");
 
         GetComponent<MeshFilter>().mesh = mesh = new Mesh();
         mesh.name = "Procedural Grid";
@@ -126,9 +137,12 @@ public class MeshRender1 : MonoBehaviour
                 triangles[ti + 4] = triangles[ti + 1] = vi + pointList.Count;
                 //subtracted one from pointList.Count
                 triangles[ti + 5] = vi + pointList.Count + 1;
+                mesh.triangles = triangles;
+                yield return wait;
             }
         }
-        mesh.triangles = triangles;
+        //mesh.triangles = triangles;
+        //yield return wait;
         mesh.RecalculateNormals();
 
         

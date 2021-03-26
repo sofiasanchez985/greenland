@@ -80,7 +80,7 @@ public class MeshRender1 : MonoBehaviour
     private IEnumerator Generate()
     //private void Generate()
     {
-        WaitForSeconds wait = new WaitForSeconds(0.005f);
+        WaitForSeconds wait = new WaitForSeconds(0.0001f);
 
         Debug.Log("GOING");
 

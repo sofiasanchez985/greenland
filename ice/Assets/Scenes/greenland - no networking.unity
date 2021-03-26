@@ -333,7 +333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &52093465
 Transform:
   m_ObjectHideFlags: 0
@@ -795,6 +795,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ice Surface (RyderSurf.)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 90390b0ce5510e049b1c19e48cde680a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90390b0ce5510e049b1c19e48cde680a, type: 3}
@@ -2096,7 +2101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &637824588
 Transform:
   m_ObjectHideFlags: 0
@@ -2196,7 +2201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &643763409
 Transform:
   m_ObjectHideFlags: 0
@@ -2589,7 +2594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &850156623
 Transform:
   m_ObjectHideFlags: 0
@@ -3705,6 +3710,7 @@ GameObject:
   - component: {fileID: 1051170038}
   - component: {fileID: 1051170037}
   - component: {fileID: 1051170036}
+  - component: {fileID: 1051170039}
   m_Layer: 0
   m_Name: 2015 Radar
   m_TagString: Untagged
@@ -3721,7 +3727,7 @@ Transform:
   m_GameObject: {fileID: 1051170034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -520.00006, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_Children: []
   m_Father: {fileID: 1730154358}
   m_RootOrder: 4
@@ -3780,7 +3786,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3796,6 +3802,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051170034}
   m_Mesh: {fileID: 0}
+--- !u!114 &1051170039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051170034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202d699b14492694eaf08b4282edf196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _meshFilter: {fileID: 1051170038}
+  _displayWireframe: 0
+  _faceNormals:
+    _draw: 1
+    _length: 0.3
+    _normalColor: {r: 0.13333334, g: 0.8666667, b: 0.8666667, a: 0.60784316}
+  _vertexNormals:
+    _draw: 0
+    _length: 0.3
+    _normalColor: {r: 0.78431374, g: 1, b: 0.7647059, a: 0.49803922}
 --- !u!1 &1074843271
 GameObject:
   m_ObjectHideFlags: 0
@@ -5803,7 +5831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1508927935
 Transform:
   m_ObjectHideFlags: 0
@@ -6605,7 +6633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1607511918
 Transform:
   m_ObjectHideFlags: 0
@@ -6763,7 +6791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1676214374
 Transform:
   m_ObjectHideFlags: 0
@@ -8223,6 +8251,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2123293459}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2016252861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2016252862}
+  m_Layer: 0
+  m_Name: 2015Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2016252862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016252861}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8465, y: 914, z: -88610}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2026358840 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4165280830115576, guid: 6f89876ff9050224f949c0490969219d,
@@ -8981,6 +9039,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RyderBed_truescale
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3666661ea4599914fb72f3b8a5832365,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3666661ea4599914fb72f3b8a5832365, type: 3}

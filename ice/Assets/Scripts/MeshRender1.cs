@@ -114,12 +114,22 @@ public class MeshRender1 : MonoBehaviour
 
                 // Mapping coordinates to fit between 0,1
 
-                float xStart = (float)pointList[0][xName];
-                float xEnd = (float)pointList[pointList.Count - 1][xName];
+                /*
+                float xStart = (float)pointList[0][xName]; //first
+                float xEnd = (float)pointList[pointList.Count - 1][xName]; //last
                 float xCurrent = (float)pointList[i][xName];
                 float xUV = (xCurrent - xStart) / (xEnd - xStart);
+                */
 
-                uv[w] = new Vector2(xUV, (float)y / ySize);
+                //this is going to fuck up 2011 and 2014
+
+                float zStart = (float)pointList[0][zName]; //first
+                float zEnd = (float)pointList[pointList.Count - 1][zName]; //last
+                float zCurrent = (float)pointList[i][zName];
+                float zUV = (zCurrent - zStart) / (zEnd - zStart);
+
+                uv[w] = new Vector2(zUV, (float)y / ySize);
+
             }
         }
         mesh.vertices = vertices;

@@ -22,5 +22,7 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   m_configObjects:
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a95bded809e0cd642836c65f0ce80c79,
+    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 9d993814c734d1b4589e05f577b9dac0,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 37a690d43f3d60a44869129bce914167,
       type: 2}

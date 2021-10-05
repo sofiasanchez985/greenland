@@ -2546,7 +2546,7 @@ MonoBehaviour:
   handType: -1
   proximityType: -1
   constraintOnRotation: 2
-  useLocalSpaceForConstraint: 0
+  useLocalSpaceForConstraint: 1
 --- !u!64 &1184085541
 MeshCollider:
   m_ObjectHideFlags: 0

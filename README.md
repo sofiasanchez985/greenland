@@ -1,4 +1,4 @@
-# AR Greenland Icesheet Visualizer!
+# AR Greenland & Antarctica Icesheet Visualizer!
 
 
 An application under development that uses MRTK in Unity in order to see Greenland's topography and ice sheets.

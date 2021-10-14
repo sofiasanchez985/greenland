@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UsePrimaryWindowForDisplay: 1
-  HolographicRemoting: 0
+  HolographicRemoting: 1
 --- !u!114 &5819836139025066614
 MonoBehaviour:
   m_ObjectHideFlags: 0

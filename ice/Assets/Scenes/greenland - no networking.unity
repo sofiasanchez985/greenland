@@ -4947,7 +4947,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnValueUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1730154359}
     - target: {fileID: 7307063430618434848, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
       propertyPath: OnValueUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -5026,7 +5026,7 @@ PrefabInstance:
     - target: {fileID: 7307063430618434848, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
       propertyPath: sliderEndDistance
-      value: 0.12499973
+      value: 0.12499972
       objectReference: {fileID: 0}
     - target: {fileID: 7307063430618434848, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
@@ -5042,7 +5042,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnValueUpdated.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1730154359}
+      objectReference: {fileID: 0}
     - target: {fileID: 7307063430618434848, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
       propertyPath: OnValueUpdated.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -5061,7 +5061,7 @@ PrefabInstance:
     - target: {fileID: 7307063430618434848, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
       propertyPath: sliderStartDistance
-      value: -0.12499963
+      value: -0.1249996
       objectReference: {fileID: 0}
     - target: {fileID: 7307063430618434851, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
@@ -7008,7 +7008,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1730154357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e797effdc1a4694ea87360695f2850e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3073ff96b95fa1b4e91134a2552ae7d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IceSheet: {fileID: 1730154358}
@@ -7971,7 +7971,7 @@ Camera:
   m_GameObject: {fileID: 1895227372}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2

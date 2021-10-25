@@ -12,7 +12,7 @@ public class VerticalSlider : MonoBehaviour
     {
         // Rotate the target object using Slider's eventData.NewValue
         TargetObject.localScale = new Vector3(TargetObject.localScale.x, 5 + (10 * eventData.NewValue), TargetObject.localScale.z);
-        Debug.Log(string.Format("Vertical: {0}", 5 + (10 * eventData.NewValue)));
+        //Debug.Log(string.Format("Vertical: {0}", 5 + (10 * eventData.NewValue)));
     }
 
 }

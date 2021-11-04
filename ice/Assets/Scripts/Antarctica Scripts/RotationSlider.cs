@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Microsoft.MixedReality.Toolkit.UI;
 
-public class HorizontalSlider : MonoBehaviour
+public class RotationSlider : MonoBehaviour
 {
-
     public Transform TargetObject;
 
     public void OnSliderUpdated(SliderEventData eventData)
     {
-        TargetObject.localScale = new Vector3(25 + (10 * eventData.NewValue), TargetObject.localScale.y, TargetObject.localScale.z);
+        float rotate = -90 + (180 * eventData.NewValue);
+        TargetObject.localRotation = Quaternion.Euler(0, rotate, 0);
     }
 
 }

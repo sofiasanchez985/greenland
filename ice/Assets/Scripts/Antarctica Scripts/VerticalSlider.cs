@@ -6,6 +6,17 @@ using Microsoft.MixedReality.Toolkit.UI;
 public class VerticalSlider : MonoBehaviour
 {
     public Transform TargetObject;
+    //private float OriginalHeight;
+    //private BoxCollider CurrentCollider;
+    //public float scale;
+
+    /*
+    private void Start()
+    {
+        CurrentCollider = TargetObject.GetComponent<BoxCollider>();
+        OriginalHeight = CurrentCollider.bounds.size.y * scale;
+    }
+    */
 
     public void OnSliderUpdated(SliderEventData eventData)
     {

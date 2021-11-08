@@ -7976,7 +7976,7 @@ PrefabInstance:
     - target: {fileID: 7307063430618434848, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
       propertyPath: sliderValue
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7307063430618434848, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
@@ -8057,6 +8057,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Horizontal Slider
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307063430618434862, guid: 1093263a89abe47499cccf7dcb08effb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7307063430758334042, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
@@ -9937,7 +9942,7 @@ PrefabInstance:
     - target: {fileID: 7307063430618434848, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
       propertyPath: sliderValue
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7307063430618434848, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
@@ -10018,6 +10023,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Vertical Slider
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307063430618434862, guid: 1093263a89abe47499cccf7dcb08effb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7307063430758334042, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}
@@ -13518,7 +13528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1594490794
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17813,6 +17823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rotation Slider
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307063430618434862, guid: 1093263a89abe47499cccf7dcb08effb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7307063430758334042, guid: 1093263a89abe47499cccf7dcb08effb,
         type: 3}

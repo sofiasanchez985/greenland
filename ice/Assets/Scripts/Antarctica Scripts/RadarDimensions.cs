@@ -41,7 +41,7 @@ public class RadarDimensions : MonoBehaviour
     public GameObject RotationDegreeText;
     private TextMeshPro RotationDegreeTMP;
 
-    void Start()
+    void Awake()
     {
         CurrentCollider = RadarQuad.GetComponent<BoxCollider>();
 
@@ -49,6 +49,8 @@ public class RadarDimensions : MonoBehaviour
         scaleX = RadarQuad.transform.localScale.x;
         scaleY = RadarQuad.transform.localScale.y;
         scaleZ = RadarQuad.transform.localScale.z;
+        Debug.Log(string.Format("scaleX {0}", scaleX));
+        Debug.Log(string.Format("scaleY {0}", scaleY));
 
         // Set original dimension values
         OriginalHeight = CurrentCollider.bounds.size.y * scale;
@@ -72,6 +74,7 @@ public class RadarDimensions : MonoBehaviour
 
     void Update()
     {
+
         // Get current dimensions of the radar image
         ScaledHeight = CurrentCollider.bounds.size.y * scale;
         ScaledWidth = CurrentCollider.bounds.size.x * scale;
@@ -91,12 +94,6 @@ public class RadarDimensions : MonoBehaviour
         // Set rotation text
         RotationDegreeTMP.text = string.Format("{0}°", RadarQuad.transform.localEulerAngles.y.ToString());
 
-        /*
-        Debug.Log(string.Format("ColliderY: {0}", collider.bounds.size.y.ToString()));
-        Debug.Log(string.Format("ColliderX: {0}", collider.bounds.size.x.ToString()));
-        Debug.Log(string.Format("VerticalDimText: {0}", ScaledHeight.ToString()));
-        Debug.Log(string.Format("HorizontalDimText: {0}", ScaledWidth.ToString()));
-        */
     }
 
     public void OnVerticalSliderUpdated(SliderEventData eventData)

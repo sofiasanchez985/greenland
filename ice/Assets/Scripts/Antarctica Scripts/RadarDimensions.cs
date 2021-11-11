@@ -17,6 +17,10 @@ public class RadarDimensions : MonoBehaviour
     private float scaleY;
     private float scaleZ;
 
+    // Scale coefficients
+    private float vertScaleValue;
+    private float hozScaleValue;
+
     // Dimension calculations
     private float OriginalHeight;
     private float OriginalWidth;
@@ -45,12 +49,14 @@ public class RadarDimensions : MonoBehaviour
     {
         CurrentCollider = RadarQuad.GetComponent<BoxCollider>();
 
-        // Set original scale values
+        // Set original scale values & coefficients
         scaleX = RadarQuad.transform.localScale.x;
         scaleY = RadarQuad.transform.localScale.y;
         scaleZ = RadarQuad.transform.localScale.z;
-        Debug.Log(string.Format("scaleX {0}", scaleX));
-        Debug.Log(string.Format("scaleY {0}", scaleY));
+        vertScaleValue = 1;
+        hozScaleValue = 1;
+        //Debug.Log(string.Format("scaleX {0}", scaleX));
+        //Debug.Log(string.Format("scaleY {0}", scaleY));
 
         // Set original dimension values
         OriginalHeight = CurrentCollider.bounds.size.y * scale;
@@ -74,7 +80,6 @@ public class RadarDimensions : MonoBehaviour
 
     void Update()
     {
-
         // Get current dimensions of the radar image
         ScaledHeight = CurrentCollider.bounds.size.y * scale;
         ScaledWidth = CurrentCollider.bounds.size.x * scale;
@@ -98,14 +103,14 @@ public class RadarDimensions : MonoBehaviour
 
     public void OnVerticalSliderUpdated(SliderEventData eventData)
     {
-        float scaleValue = 1 + eventData.NewValue;
-        RadarQuad.transform.localScale = new Vector3(scaleX, scaleY * scaleValue, scaleZ);
+        vertScaleValue = 1 + eventData.NewValue;
+        RadarQuad.transform.localScale = new Vector3(scaleX * hozScaleValue, scaleY * vertScaleValue, scaleZ);
     }
 
     public void OnHorizontalSliderUpdated(SliderEventData eventData)
     {
-        float scaleValue = 1 + eventData.NewValue;
-        RadarQuad.transform.localScale = new Vector3(scaleX * scaleValue, scaleY, scaleZ);
+        hozScaleValue = 1 + eventData.NewValue;
+        RadarQuad.transform.localScale = new Vector3(scaleX * hozScaleValue, scaleY * vertScaleValue, scaleZ);
     }
 
     public void OnRotateSliderUpdated(SliderEventData eventData)

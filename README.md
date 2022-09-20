@@ -19,5 +19,7 @@ Working under our advisors Professor Steven Feiner, Alexandra Boghosian, and Car
 
 <img src="https://raw.githubusercontent.com/sofiasanchez985/greenland/main/overview.png"      alt="Markdown Monster icon"      style="float: left; margin-right: 10px;" />
 
+<img src="https://github.com/sofiasanchez985/greenland/blob/final/topdownview.png"      alt="Markdown Monster icon"      style="float: left; margin-right: 10px;" />
+
 <img src="https://raw.githubusercontent.com/sofiasanchez985/greenland/main/topdownview.png"      alt="Markdown Monster icon"      style="float: left; margin-right: 10px;" />
 

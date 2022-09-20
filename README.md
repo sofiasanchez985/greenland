@@ -1,7 +1,7 @@
 # AR Greenland & Antarctica Icesheet Visualizer!
 
 
-An application under development that uses MRTK in Unity in order to see Greenland's topography and ice sheets.
+An application using MRTK in Unity in order to see Greenland's topography and ice sheets with ice-penetrating radar data. See abstract.pdf for more information on the project.
 Watch a short demo of the functionality here: https://drive.google.com/file/d/1RfFgx66yGTz0GzWOVUtaKEL0nS4DZ83X/view?usp=sharing
 
 Contributors:

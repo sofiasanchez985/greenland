@@ -8,7 +8,7 @@ Contributors:
 * [Sofia Sanchez](https://github.com/sofiasanchez985/greenland), Columbia University
 * [Manxueying Li](https://github.com/lmxy0212), Columbia University
 
---- Unfinished Project Under Construction as of October 2020 ---
+--- This project was discontinued in order to focus on Antarctic ice shelves (https://github.com/sofiasanchez985/antARctica) ---
 
 An application under development that uses MRTK in Unity in order to see Greenland's topography and ice sheets.
 
